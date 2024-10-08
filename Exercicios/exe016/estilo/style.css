@@ -19,7 +19,7 @@ html, body {
     font-family: var(--font1);
 }
 header {
-    background-color: black;
+    background-color: peru;
     color: white;
     text-align: center;
 }
@@ -72,18 +72,18 @@ section.imagem > p {
     background-color: rgba(0,0,0,0.253);
 }
 section#img01 {
-    background-image: url(../imagens/background001.jpg);
+    background-image: url(../imagens/dom-pedro.webp);
     background-position: right center;
     background-size: cover;
 }
 
 section#img02 {
-    background-image: url(../imagens/background002.jpg);
+    background-image: url(../imagens/ghjltykl.webp);
     background-size: cover;
 }
 
 footer {
-    background-color: black;
+    background-color: peru;
     color: white;
     text-align: center;
     padding: 10px;
