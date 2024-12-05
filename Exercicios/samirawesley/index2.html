@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa GOV</title>
+    <link rel="shortcut icon" href="imagem/logo.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: url(../Imagens/back-tablet.jpg);
+        }
+
+        header {
+            background-color: #333;
+            color:rgb(250, 248, 248);
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #f8f7f7;
+            color: black;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #fdfbfb;
+        }
+
+        section {
+            background-color: #444;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px ;
+            color: azure;
+        }
+
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Empresa GOV</h1>
+        <p>Inovando e Transformando o Futuro</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#home" target="_blank">Home</a>
+        <a href="https://pt.wikipedia.org/wiki/Empresa_Brasileira_de_Correios_e_Tel%C3%A9grafos" target="_blank">Sobre Nós</a>
+        <a href="https://pt.wikipedia.org/wiki/Empresa_Brasileira_de_Correios_e_Tel%C3%A9grafos" target="_blank">Serviços</a>
+        <a href="https://www.correios.com.br/falecomoscorreios/central-de-atendimento#:~:text=3003%200100%20%2D%20Capitais%20e%20Regi%C3%B5es,%2D%20Demais%20Localidades%20(fixo)." target="_blank">Contato</a>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Home -->
+        <section id="home">
+            <h2>Bem-vindo à Empresa GOV!</h2>
+            <p>Somos uma empresa dedicada à inovação e excelência, oferecendo as melhores soluções para nossos clientes.
+                Nossa missão é transformar ideias em realidade com qualidade e eficiência.</p>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Fundada em 2019, a Empresa GOV vem se destacando no mercado por sua capacidade de fornecer
+                soluções personalizadas e eficazes para empresas de diversos setores. Nossa equipe é composta por
+                profissionais altamente qualificados e apaixonados pelo que fazem.</p>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <ul class="services-list">
+                <li><strong>Consultoria Empresarial:</strong> Oferecemos consultoria estratégica para empresas que desejam
+                    crescer de forma sustentável e inovadora.</li>
+                <li><strong>Desenvolvimento de Software:</strong> Criamos soluções personalizadas em software para
+                    otimizar os processos internos de sua empresa.</li>
+                <li><strong>Marketing Digital:</strong> Estratégias eficientes para aumentar sua presença digital e alcançar
+                    mais clientes.</li>
+                <li><strong>Gestão de Projetos:</strong> Gerenciamos projetos de forma ágil e eficiente, garantindo a
+                    entrega dentro do prazo e orçamento.</li>
+            </ul>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para saber mais sobre nossos serviços ou tirar dúvidas.</p>
+
+            <form class="contact-form" action="https://sso.acesso.gov.br/login?client_id=portal-logado.estaleiro.serpro.gov.br&authorization_id=19396c35a32" target="_blank" method="post" enctype="text/plain">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    
+</body>
+
+</html>
