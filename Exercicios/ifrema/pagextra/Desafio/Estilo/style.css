@@ -1,39 +1,50 @@
-,
+@charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
-    font-family: 'android';
-    src: url(fontes/idroid.otf)format('opentype');
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
     font-weight: normal;
+
 }
-:root{
-    --cor0: #e7968b;
-    --cor1: #e06a5a;
-    --cor2: #c74332; 
-    --cor3: #d1321d;
-    --cor4: #d41a02;
-    --cor5: #7a1406; 
-    
+
+:root {
+
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
     --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
-    --fonte-destaque: 'Bebas Neve', cursive;
+    --fonte-destaque: 'Bebas Neue', cursive;
     --fonte-android: 'Android', cursive;
+
 }
-body{
-    background-color: #cf7673;
+
+
+body {
+    background-color: var(--cor0);
     font-family: var(--fonte-padrao);
 }
-header{
-    background-color: var(--cor4); /*backgroud-image: linear-gradient(to bottom, var(--cor03), var(--cor05));*/
-    min-height: var(--fonte-destaque);
+header {
+    background-color: var(--cor4); /* background-image: liner-gradient(to bottom, var(--cor3), var(--cor5));*/
+    min-height: 150px;
     text-align: center;
-    padding: 40px;
+    padding-top: 40px;
 }
+
+
 header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 3em;
     margin-bottom: 20px;
    }
-   header > p {
+
+header > p {
+
     font-family: var(--fonte-destaque);
     font-size: 1.2em;
     color: white;
@@ -41,8 +52,13 @@ header > h1 {
     padding-right: 10px;
     padding-left: 10px;
     margin: auto;
+  
+
 }
+
+
 nav {
+    
     background-color: var(--cor5);
     padding: 10px;
 }
@@ -52,33 +68,30 @@ nav > a {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition-duration: 0.5s;
+    transition-duration: 0,5s;
 }
-nav > a:hover {
+nav > a :hover {
     background-color: var(--cor3);
     color: var(--cor5);
 }
 main {
-    min-width: 300px;
-    max-width: 1000px;
-    padding: 20px;
-    margin: auto;
-    margin-bottom: 30px;
- background-color: white;
- border-bottom-left-radius: 10px;
- border-bottom-right-radius: 10px;
-        
-         
+       min-width: 300px;
+       max-width: 1000px;
+       padding: 20px;
+       margin: auto;
+       margin-bottom: 30px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+           
+            
 }
 
 main h1 {
- color: var(--cor5);
- font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-family: var(--fonte-android);
 }
 
-main h2 {
- font-family: var(--fonte-android);
-}
 main h2 {
     font-family: var(--fonte-android);
 }
@@ -92,20 +105,7 @@ main img.pequena {
     display: block;
     margin: auto;
 }
-div.video{
-    background-color: var(--cor5);
-    padding: 20px;
-    padding-bottom: 58%;
-    margin: 0px -20px 30px -20px;
-    position: relative;
-}
-div.video > iframe{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    }
+
 main p {
     margin: 15px 0px;
     text-align: justify;
@@ -138,25 +138,6 @@ main h2 {
     background-image: linear-gradient(to right, var(--cor1),transparent);
     text-indent: 8px;
 }
-aside {
-    background-color: var(--cor1);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-aside h3 {
-    background-color: var(--cor4);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0px -10px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-aside > ul {
-    list-style-type: '\2714\0010\0010';
-    list-style-position: inside;
-    columns: 2;
-}
 
 footer {
     background-color: var(--cor5);
@@ -177,7 +158,22 @@ footer a:hover {
     color: var(--cor1)
 }
 
-footer {
-    background-color: var(--cor5);
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside h3 {
+    background-color: var(--cor4);
     color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\0010\0010';
+    list-style-position: inside;
+    columns: 2;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color:antiquewhite;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            
+
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input,textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #180c0c;
+            border-radius: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="Cadastro.php" method="post" autocomplete="off">
+  <h1>Meu Primeiro Formulário &#128221;</h1> 
+    <form>
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="Nome" id="nome"></p>
+        <p><label for="iSobrenome">Sobrenome:</label>
+            <input type="text" name="Sobrenome" id="Sobrenome"></p>
+        <p><label for="iEndereço">Endereço:</label>
+            <input type="text" name="Endereço" id="Endereço"></p>
+        <p> <label for="iE-mai">E-mai:</label>
+            <input type="text" name="E-mai" id="E-mai"></p>
+        <p><input type="submit" value="Enviar"></p>
+        <p><input type="reset" value="Limpar"></p>
+        <p>
+        <label for="iusu">Usuário:</label>
+        <input type="text" name="usu" required minlength="5" maxlength="30" size="10" placeholder="Nome do usuário" autocomplete="username">
+    </p>
+    <p>
+        <label for="isen">Senha:</label>
+        <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="minimo 8 letras" autocomplete="current-password">
+    </p>
+    </form>
+</body>
+</html>
