@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Maquiagem</title>
+    <link rel="shortcut icon" href="logo_mari-maria-make-up.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: rgb(180, 124, 19);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('imagem\ mari\ maria.png') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 270px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product h2 {
+            font-size: 1.6em;
+            color: #333;
+        }
+        .product p {
+            color: #777;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .product .price {
+            font-size: 1.5em;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        .product button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product button:hover {
+            background-color: #e65a53;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+        .contact-form button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #e65a53;
+        }
+        .promo-section {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .promo-section h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .promo-section .promo-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .promo-product {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 270px;
+            text-align: center;
+        }
+        .promo-product h2 {
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+        .promo-product .promo-price {
+            font-size: 1.3em;
+            color: #ff6f61;
+            font-weight: bold;
+        }
+        .promo-product button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .promo-product button:hover {
+            background-color: #e65a53;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Loja de Maquiagem</h1>
+        <p>Encontre os melhores produtos de beleza para realçar sua beleza!</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="https://www.marimariamakeup.com/#&search-term=Produtos">Produtos</a>
+        <a href="Promoções.html">Promoções</a>
+        <a href="#contatos">Contato</a>
+    </nav>
+
+    <section class="banner">
+        <p>Ofertas Imperdíveis de Maquiagem!</p>
+    </section>
+
+    <section class="promo-section" id="Produtos">
+        <h2>Promoções Especiais</h2>
+        <div class="promo-products">
+            <div class="promo-product">
+                <img src="batom mari maria.png" alt="Batom Matte">
+                <h2>Batom</h2>
+                <p>Batom Liquido Creamy Matte - Red Carpet | Mari Maria Makeup
+                    3,8ml</p>
+                <p class="promo-price">R$ 34,90</p>
+                <button> <a href="https://www.marimariamakeup.com/batom-liquido-creamy-matte-red-carpet/p">Comprar</a></button>
+            </div>
+            <div class="promo-product">
+                <img src="sombra-colorida-mari-mari.png" alt="Paleta de Sombras">
+                <h2>Paleta de Sombras</h2>
+                <p>Desconto especial para você! Cores vibrantes e duradouras.</p>
+                <p class="promo-price">R$ 86,90</p>
+                <button> <a href="https://www.marimariamakeup.com/color-palette-ginger-glow/p">Comprar</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="product">
+            <img src="Base mari maria.png" alt="Base Líquida">
+            <h2>Base Líquida</h2>
+            <p>Base e Corretivo Matte Velvet Skin - Bege Médio | Mari Maria Makeup
+                25g</p>
+            <p class="price">R$ 69,90</p>
+            <button> <a href="https://www.marimariamakeup.com/base-e-corretivo-velvet-skin-bege-medio/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="corretivo.png" alt="Batom Matte">
+            <h2>Corretivo</h2>
+            <p>Corretivo Cover Up - MM06 | Mari Maria Makeup
+                5,2ml</p>
+            <p class="price">R$ 49,90</p>
+            <button> <a href="https://www.marimariamakeup.com/corretivo-coverup-mm6/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="Po-solto.png" alt="Pó Compacto">
+            <h2>Pó Compacto</h2>
+            <p>Pó solto Soft Silk - Cupcake | Mari Maria Makeup
+                Clique e veja!
+                15g</p>
+            <p class="price">R$ 59,90</p>
+            <button> <a href="https://www.marimariamakeup.com/po-solto-soft-silk-cupcake/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="Gloss-glassy-lips-jello.png" alt="Gloss">
+            <h2>Gloss Glassy</h2>
+            <p>Gloss Glassy - Jello | Mari Maria Makeup
+                3,8ML</p>
+            <p class="price">R$ 36,90</p>
+            <button> <a href="https://www.marimariamakeup.com/gloss-glassy-lips-jello/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="iluminador- mari maria.png" alt="Iluminador">
+            <h2>Iluminador</h2>
+            <p>Iluminador Facial Divine Glow - Aurora | Mari Maria Makeup
+                Clique e veja!</p>
+            <p class="price">R$ 45,90</p>
+            <button> <a href="https://www.marimariamakeup.com/iluminador-divine-glow-aurora/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="oleo.png" alt="Oleo">
+            <h2>Oléo Capilar</h2>
+            <p>Óleo Reparador 3 em 1 Vita Glow | OX Mari Maria Hair</p>
+            <p class="price">R$ 54,00</p>
+            <button><a href="https://www.marimariamakeup.com/oleo-reparador-3-em-1-vita-glow-ox-mari-maria-hair/p">Comprar</a></button>
+        </div>
+
+        <div class="product">
+            <img src="Ice-Globes-Tratamento-facial-Mari-Maria-Make-up-Laranja-caixa.png" alt="Ice Globes">
+            <h2>Ice Globes</h2>
+            <p>Ice Globes - Tratamento facial</p>
+            <p class="price">R$ 109,90</p>
+            <button><a href="https://www.marimariamakeup.com/ice-globes/p">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="Frasco-Vidro-Aberto-Sombra-Jelly-Imperial.png" alt="Sombra jelly">
+            <h2>Sombra jelly</h2>
+            <p>Sombra Jelly - Imperial Mari Maria Makeup
+                4g</p>
+            <p class="price">R$ 59,90</p>
+            <button><a href="https://www.marimariamakeup.com/sombra-jelly-imperial/p">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="red_NZ_36992.png" alt="Mascara facial">
+            <h2>Mascara Facial</h2>
+            <p>Glass Mask Fúcsia Mari Maria Makeup
+                40 g</p>
+            <p class="price">R$ 69,90</p>
+            <button><a href="https://www.marimariamakeup.com/glass-mask/p">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="mascara-sobrancelhas.png" alt="mascara de sobrancelha">
+            <h2>Mascara de Sobrancelha</h2>
+            <p>Brow Stick - Incolor | Mari Maria Makeup
+                3g</p>
+            <p class="price">R$ 44,90</p>
+            <button><a href="https://www.marimariamakeup.com/brow-stick-incolor/p">Comprar</a></button>
+        </div>
+        <div class="product">
+            <img src="cilios-lashes-drama-glam-posticos-mari-maria-makeup.png" alt="Cilios">
+            <h2>Cilios Postiço</h2>
+            <p>Cílios postiços - Lashes Drama Glam Mari Maria Makeup</p>
+            <p class="price">R$ 44,90</p>
+            <button><a href="https://www.marimariamakeup.com/cilios-posticos-lashes-drama-glam/p">Comprar</a></button>
+        </div>
+    </section>
+
+    <section id="contatos">
+        <h2 style="text-align:center; margin: 40px 0;">Entre em Contato Conosco</h2>
+        <div class="contact-form" id="Contato">
+            <form action="#" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Loja de Maquiagem. Criador Wesley Henrique.</p>
+    </footer>
+
+</body>
+</html>
